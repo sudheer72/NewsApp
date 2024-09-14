@@ -1,0 +1,207 @@
+/* Base styles (Light Mode) */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.header {
+  background-color: #283593; /* Indigo */
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header form {
+  margin-top: 20px;
+}
+
+.header input {
+  padding: 12px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 320px;
+  max-width: 80%;
+}
+
+.header button {
+  padding: 12px 20px;
+  background-color: #ff6f61; /* Coral Red */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #ff8a80; /* Lighter Coral Red */
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.news-item {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content and button are separated */
+  height: 100%; /* Make sure all news items are the same height */
+}
+.news-item:hover {
+  transform: translateY(-10px);
+}
+
+.news-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-item h2 {
+  font-size: 20px;
+  margin: 15px;
+  color: #283593;
+}
+.news-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 15px 15px 15px;
+  flex-grow: 1; /* Push the content to take up available space */
+}
+
+.news-item a {
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  background-color: #283593; /* Indigo */
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  align-self: flex-end; /* Align button at the bottom */
+}
+
+.news-item a:hover {
+  background-color: #3949ab; /* Lighter Indigo */
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background-color: #3949ab;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.theme-toggle:hover {
+  background-color: #5c6bc0;
+}
+
+/* Dark Mode */
+.app.dark {
+  background-color: #1c1c1e;
+  color: white;
+}
+
+.app.dark .header {
+  background-color: #111;
+}
+
+.app.dark .header button {
+  background-color: #5c6bc0; /* Indigo for dark mode */
+}
+
+.app.dark .news-item {
+  background-color: #333;
+  color: white;
+  box-shadow: none;
+}
+
+.app.dark .news-item a {
+  background-color: #5c6bc0;
+}
+
+.app.dark .news-item a:hover {
+  background-color: #7986cb;
+}
+
+/* Eye Comfort Mode */
+.app.eye-comfort {
+  background-color: #f4f4d7; /* Warm background */
+  color: #555; /* Softer text */
+}
+
+.app.eye-comfort .header {
+  background-color: #b0856d; /* Warm header color */
+}
+
+.app.eye-comfort .header button {
+  background-color: #a64f3c;
+}
+
+.app.eye-comfort .news-item {
+  background-color: #ffe6b3; /* Warm card background */
+  color: #555;
+  box-shadow: none;
+}
+
+.app.eye-comfort .news-item a {
+  background-color: #a64f3c;
+}
+
+.app.eye-comfort .news-item a:hover {
+  background-color: #c27c4f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header input {
+    width: 200px;
+  }
+
+  .news-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-item {
+    width: 90%;
+  }
+}
+
